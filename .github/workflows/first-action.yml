@@ -1,0 +1,18 @@
+# Every workflow must have a name
+name: First Workflow
+
+# When the workflow will be triggered
+# workflow_dispatch stands for manual workflow trigger
+on: workflow_dispatch
+
+jobs:
+  # job name can be anything
+  first-job:
+    # Runner must be defined in first line of the job
+    runs-on: ubuntu-latest
+    steps:
+      # First line of a step should be the name for debugging purposes
+      - name: Print Greeting
+        run: echo "Hello World"
+      - name: Print Goodbye
+        run: echo "Done - Bye"
